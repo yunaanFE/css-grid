@@ -1,0 +1,68 @@
+{
+  "name": "css-grid",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/faker": "5.5.9",
+    "faker": "5.5.3",
+    "next": "^13.4.9",
+    "node-sass": "^9.0.0",
+    "prettier": "^3.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "sass": "^1.63.6",
+    "swiper": "^9.0.3",
+    "typescript": "*",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "clean": "rm -rf ./packages/**/dist&&rm -rf ./packages/**/tsconfig.tsbuildinfo&&rm -rf ./apps/**/dist",
+    "reset": "rm -rf ./node_modules&&rm -rf ./packages/*/node_modules",
+    "build": "next build",
+    "dev": "next dev -p 9342",
+    "next": "next",
+    "lint": "eslint ./app --ext .ts,.tsx",
+    "lint:result": "rm -f lint-result.html && yarn lint -o lint-result.html -f html"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.2",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint": "^8.0.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard-with-typescript": "^36.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  }
+}

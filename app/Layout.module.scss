@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  height: 100vh; /* 화면의 100% 높이 */
+  grid-template-rows: 1fr; /* 하나의 행을 사용하고 화면의 높이를 채움 */
+
+  &__inner {
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
+  }
+
+  :global .mySwiper {
+    height: inherit;
+  }
+}
