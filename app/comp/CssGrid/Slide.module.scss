@@ -1,0 +1,45 @@
+.swiper {
+  .title {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+  .red {
+    color: red;
+  }
+
+  .img {
+    width: 1000px;
+    margin: 30px auto 0;
+    img {
+      width: 100%;
+    }
+  }
+  .imgs {
+    width: 1000px;
+    margin: 30px auto 0;
+    img {
+      width: 50%;
+      vertical-align: middle;
+    }
+  }
+  .link {
+    color: #00cee5;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  .codepen {
+    width: 1300px;
+  }
+  .opacity {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+
+    &.show {
+      opacity: 1;
+    }
+  }
+  a {
+    display: block;
+  }
+}
