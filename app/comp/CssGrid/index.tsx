@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { CodeBlock, dracula } from 'react-code-blocks';
 import { type Theme } from 'react-code-blocks/dist/types';
 import { PrefillEmbed, PrefillLang, stripIndent, useCodePenEmbed } from 'react-codepen-prefill-embed';
@@ -12,7 +12,7 @@ import grid01 from '../../assets/img/grid01.png';
 import grid02 from '../../assets/img/grid02.png';
 import mmt01 from '../../assets/img/mmt01.png';
 import mmt02 from '../../assets/img/mmt02.png';
-import styles from './slide.module.scss';
+import styles from './index.module.scss';
 
 export const CssGrid = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,19 +37,16 @@ export const CssGrid = () => {
       <SwiperSlide>
         <div className="PPTbox">
           디자인(2D)이 어떻게 컴퓨터의 화면(clickable)으로 표시가 될까요?
-          <div className={`${styles.img} ${styles.opacity} ${isVisible ? styles.show : ''}`}>
+          <div className={`${styles.answer} ${styles.opacity} ${isVisible ? styles.show : ''}`}>
             🙋🏻‍♀️ 컴퓨터 언어로 coding해서 원하는 디자인을 그려냅니다 <br />
             이러한 작업을 위해 필요한 언어가 HTML / CSS / JS 입니다!
           </div>
-          <br />
-          <br />
           <div className={styles.img}>
             <img src={design01.src} alt="" />
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        {/* <PreviewComponent/> */}
         <div className="PPTbox">
           <div className={styles.title}>CSS란 무엇 일까요?</div>
           <CodeBlock
@@ -129,8 +126,6 @@ export const CssGrid = () => {
                 'https://unpkg.com/react@16.8/umd/react.development.js',
                 'https://unpkg.com/react-dom@16.8.6/umd/react-dom.development.js',
                 'https://unpkg.com/react-dom@16.8.6/umd/react-dom-server.browser.development.js',
-                'https://static.codepen.io/assets/eahttps://static.codepen.io/assets/embed/ei.jsmbed/ei.js',
-                'https://unpkg.com/react-codepen-prefill-embed@latest/dist/umd/index.js',
               ]}
               stylesheets={['https://unpkg.com/normalize.css@8.0.1/normalize.css']}
             >
@@ -237,8 +232,6 @@ export const CssGrid = () => {
                 'https://unpkg.com/react@16.8/umd/react.development.js',
                 'https://unpkg.com/react-dom@16.8.6/umd/react-dom.development.js',
                 'https://unpkg.com/react-dom@16.8.6/umd/react-dom-server.browser.development.js',
-                'https://static.codepen.io/assets/eahttps://static.codepen.io/assets/embed/ei.jsmbed/ei.js',
-                'https://unpkg.com/react-codepen-prefill-embed@latest/dist/umd/index.js',
               ]}
               stylesheets={['https://unpkg.com/normalize.css@8.0.1/normalize.css']}
             >
@@ -419,7 +412,6 @@ export const CssGrid = () => {
           </a>
           <br />
           <br />
-          <br />
           flexbox와 grid의 차이점{' '}
           <a href="https://velog.io/@ikkim01/CSS-Flex-VS-Grid" target="_blank" className={styles.link} rel="noreferrer">
             CSS Flex VS Grid
@@ -434,7 +426,6 @@ export const CssGrid = () => {
           <a href="https://flexboxfroggy.com/#ko" target="_blank" className={styles.link} rel="noreferrer">
             Flexbox game
           </a>
-          <br />
           <br />
           <br />
           <div className={`${styles.imgs} ${styles.opacity} ${isVisible ? styles.show : ''}`}>
@@ -454,26 +445,4 @@ export const CssGrid = () => {
       </SwiperSlide>
     </Swiper>
   );
-};
-
-export const PreviewComponent = () => {
-  const [content, setContent] = useState('');
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://www.naver.com');
-        const htmlContent = await response.text();
-        setContent(htmlContent);
-      } catch (error) {
-        console.error('Error fetching content:', error);
-      }
-    };
-
-    fetchData().catch(error => {
-      console.error('Error fetching content:', error);
-    });
-  }, []);
-
-  return <div dangerouslySetInnerHTML={{ __html: content }} />;
 };
