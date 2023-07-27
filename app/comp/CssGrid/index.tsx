@@ -12,7 +12,7 @@ import grid01 from '../../assets/img/grid01.png';
 import grid02 from '../../assets/img/grid02.png';
 import mmt01 from '../../assets/img/mmt01.png';
 import mmt02 from '../../assets/img/mmt02.png';
-import styles from './slide.module.scss';
+import styles from './index.module.scss';
 
 export const CssGrid = () => {
   const [isVisible, setIsVisible] = useState(false);
